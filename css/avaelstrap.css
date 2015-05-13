@@ -5,6 +5,23 @@ head,body{
   width:100%;
 }
 
+.clearfix:before,
+.clearfix:after {
+    content: ".";    
+    display: block;    
+    height: 0;    
+    overflow: hidden; 
+}
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+div, p, a, li, td { 
+  -webkit-text-size-adjust:100%; 
+  -moz-text-size-adjust: 100%;
+  –ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 ul {
   list-style: none;
   padding: 0px;

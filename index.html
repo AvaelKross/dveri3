@@ -1,0 +1,424 @@
+<html lang=en ng-app="dveri" ng-controller="MainCtrl" scroll>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Краснодеревщик - Екатеринбург</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link rel=stylesheet href='css/avaelstrap.css'>
+  <link rel=stylesheet href='css/style.css'>
+  <script src="scripts/lib/jquery-1.10.2.min.js"></script>
+  <script src="scripts/lib/angular.min.js"></script>
+  <script src="scripts/lib/lodash.min.js"></script>
+  <script src="scripts/lib/angular-route.min.js"></script>
+  <script src="scripts/lib/jquery.maskedinput.min.js"></script>
+ 
+  <section class="header">
+    <div class="wrapper">
+      <div class="logo-and-address">
+        <div class="logo">
+          <img src="images/logo.png" />
+          Продаем и устанавливаем двери с 2009 года
+        </div>
+        <div class="right">
+          <button>Адреса в Екатеринбурге</button>
+          <div class="phone">
+            +7 (343) 288-23-70
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="main" id="sale">
+    <div class="wrapper">
+      <h1>продаём каждую 3-ю дверь<br>за 70 % от цены</h1>
+      <h3>акция действует до конца мая</h3>
+      <form ng-submit="sendData(this,'главный экран-заказ каталога', 'main')">
+        <h3>Оставьте заявку на участие в акции</h3>
+        <input type="text" class="form-name" id="main-name" placeholder="Ваше имя" ng-model="names['main']"></input>
+        <input type="text" input-mask class="form-phone" id="main-phone" placeholder="Ваш телефон" ng-model="phones['main']"></input>
+        <input type="text" class="form-mail" id="main-mail" placeholder="Ваш e-mail" ng-model="emails['main']"></input>
+        <button type="button" id="main-name" class="button-red">ПОЛУЧИТЬ</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="menu-placeholder" ng-show="fixedMenu"></div>
+
+  <section class="menu" ng-class="{fixed:fixedMenu}">
+    <div class="wrapper">
+      <nav>
+        <ul>
+          <li><a href="#sale" class="active">Акция месяца</a></li>
+          <li><a href="#catalog">Каталог дверей</a></li>
+          <li><a href="#advices">Советы по подбору</a></li>
+          <li><a href="#struct">Структура дверей</a></li>
+          <li><a href="#reviews">Отзывы клиентов</a></li>
+          <li><a href="#salons">Контакты салонов</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <div class="wrapper">
+      <h2>самые популярные модели<br>января-апреля 2015 года</h2>
+
+      <div class="doors">
+        <div class="door">
+          <div class="info">
+            <div class="image"></div>
+          </div>
+          <div class="shadow"></div>
+          <div class="door-title">Tornado</div>
+        </div>
+        <div class="door">
+          <div class="info">
+            <div class="image" style="background-position: -172px 0px"></div>
+          </div>
+          <div class="shadow"></div>
+          <div class="door-title">Bumerang</div>
+        </div>
+        <div class="door">
+          <div class="info">
+            <div class="image" style="background-position: -344px 0px"></div>
+          </div>
+          <div class="shadow"></div>
+          <div class="door-title">Kaskad</div>
+        </div>
+        <div class="door">
+          <div class="info">
+            <div class="image"></div>
+          </div>
+          <div class="shadow"></div>
+          <div class="door-title">Tornado</div>
+        </div>
+        <div class="door">
+          <div class="info">
+            <div class="image" style="background-position: -172px 0px"></div>
+          </div>
+          <div class="shadow"></div>
+          <div class="door-title">Bumerang</div>
+        </div>
+        <div class="door">
+          <div class="info">
+            <div class="image" style="background-position: -344px 0px"></div>
+          </div>
+          <div class="shadow"></div>
+          <div class="door-title">Kaskad</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pros">
+    <div class="wrapper columns">
+      <h2>Двери по ценам официального производителя<br>с гарантией до 5 лет</h2>
+      <div class="column" class="advances-list" style="margin-left: 0px; width: 392px;">
+        <div class="qweqweqwe" style="width: 335px"></div>
+        <div class="advance" fadein="0">
+          <div class="advance-icon" style="background-position: 0px 0px;"></div>
+          <div class="advance-title">Полотно царговой конструкции</div>
+          <div class="advance-subtitle">Придаёт двери дополнительную прочность,<br>исключая деформацию дверного полотна.</div>
+        </div>
+        <div class="advance" fadein="200">
+          <div class="advance-icon" style="background-position: 0px -75px;"></div>
+          <div class="advance-title">Тепло и барьер для запахов</div>
+          <div class="advance-subtitle">Уплотнитель по всему периметру дверной<br>коробки сохраняет тепло и препятствует<br>проникновению посторонних запахов.</div>
+        </div>
+        <div class="advance" fadein="400">
+          <div class="advance-icon" style="background-position: 0px -150px;"></div>
+          <div class="advance-title">ПВХ-покрытие</div>
+          <div class="advance-subtitle">Не выгорает под прямыми лучами, устойчиво к<br>царапинам и влаге. Подходит для ванных комнат.</div>
+        </div>
+      </div>
+      <div class="column advances-picture">
+      </div>
+      <div class="column" class="advances-list" style="margin-left:30px; width:335px;">
+        <div class="advance" fadein="600">
+          <div class="advance-icon" style="background-position: -115px 0px;"></div>
+          <div class="advance-title">Открывание в любую сторону</div>
+          <div class="advance-subtitle">Сторона открывания определяется в момент<br>установки.</div>
+        </div>
+        <div class="advance" fadein="800">
+          <div class="advance-icon" style="background-position: -115px -75px;"></div>
+          <div class="advance-title">Эстетичный вид</div>
+          <div class="advance-subtitle">Коробка телескоп позволяет оформлять дверной<br>проем без применения дополнительных<br>крепежей гвоздей и шурупов.</div>
+        </div>
+        <div class="advance" fadein="1000">
+          <div class="advance-icon" style="background-position: -115px -150px;"></div>
+          <div class="advance-title">Бесшумная эксплуатация</div>
+          <div class="advance-subtitle">Специальное крепление стекла обеспечивает<br>отсутствие дребезжания при эксплуатации двери.</div>
+        </div>
+      </div>
+    </div>
+    <div class="clear" style="clear: both;"></div>
+  </section>
+
+  <section class="leadform">
+    <div class="wrapper columns">
+      <div class="column">
+        <img src="images/magazine.jpg" alt='magazine'/>
+      </div>
+      <div class="column">
+        <h2>Самый полный каталог дверей<br>с актуальными ценами</h2>
+        <button class="button-red">ПОЛУЧИТЬ</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="advices" id="advices">
+    <div class="wrapper">
+      <h2>7 важных ответов про подбор двери</h2>
+      <div class="advices-columns">
+        <div class="columns" style="padding-left:33px;">
+          <div class="column">
+            <div class="advice-title">Как выбрать дверь?</div>
+            <div class="plus" ng-class="{minus:plus[0]}" ng-click="tooglePlus(0)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[0]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+          <div class="column">
+            <div class="advice-title">Что делать, если<br>дверь потеряла вид<br>или сломалась?</div>
+            <div class="plus" ng-class="{minus:plus[1]}" ng-click="tooglePlus(1)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[1]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+          <div class="column">
+            <div class="advice-title">Как скоро я получу<br>свои двери?</div>
+            <div class="plus" ng-class="{minus:plus[2]}" ng-click="tooglePlus(2)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[2]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+          <div class="column">
+            <div class="advice-title">какие модели дверей<br>есть у вас в наличии?</div>
+            <div class="plus" ng-class="{minus:plus[3]}" ng-click="tooglePlus(3)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[3]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+        </div>
+        <div class="clear" style="clear: both;"></div>
+        <div class="columns" style="padding-left:161px;">
+          <div class="column">
+            <div class="advice-title">Сколько стоит<br>установка двери?</div>
+            <div class="plus" ng-class="{minus:plus[4]}" ng-click="tooglePlus(4)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[4]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+          <div class="column">
+            <div class="advice-title">Можно ли купить<br>дверь в кредит?</div>
+            <div class="plus" ng-class="{minus:plus[5]}" ng-click="tooglePlus(5)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[5]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+          <div class="column">
+            <div class="advice-title">как мне принять<br>участие в акции?</div>
+            <div class="plus" ng-class="{minus:plus[6]}" ng-click="tooglePlus(6)" ng-mouseover="closeAllPluses()"></div>
+            <div class="triangle-isosceles" ng-class="{show:plus[6]}">
+            Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="struct1" id="struct">
+    <div class="wrapper">
+      <h2>преимущества конструкции двери</h2>
+      <div class="columns">
+        <div class="column">
+          СОТОВОЕ ЗАПОЛНЕНИЕ<br>
+          (Каркасные двери)
+        </div>
+        <div class="column" style="float: right; margin-right: 20px;">
+          КОМБИНИРОВАННОЕ ЗАПОЛНЕНИЕ<br>
+          (Царговые двери)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="struct-pic">
+    <div class="wrapper">
+    </div>
+  </section>
+
+  <section class="struct2">
+    <div class="wrapper">
+      <div class="columns">
+        <div class="column" style="margin-left: 60px;">
+          <ul>
+            <li>Ячейка 15 мм,<br>Стандартная толщина 40 мм<br>Вес 1м/кв - 12 кг.</li>
+            <li>Внутренний ячеистый наполнитель делается из картона или оргалита.</li>
+            <li>Имеет структуру, напоминающую пчелиные соты.</li>
+            <li>От размера ячейки в диаметре зависят основные свойства: прочность и шумоподавление.</li>
+            <li>Чем плотнее материал и меньше размеры сот заполнителя, тем эти свойства выше.</li>
+          </ul>
+        </div>
+        <div class="column" style="float:right; margin-right:60px;">
+          <ul>
+            <li>Сборная конструкция - LVL и облицовка панелями ДВП.<br>Стандартная толщина полотна 40 мм.<br>Вес 1м/кв - 28 кг.</li>
+            <li>Основой двери являются вертикальные и горизонтальные царги, изготовленные из переклеенного массива древесины и MDF.</li>
+            <li>Конструкция царговой двери представляет из себя две вертикальные стойки, которые соединены между собой поперечными брусками - царгами.</li>
+            <li>Отличительной особенностью царговых полотен является...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="reviews" id="reviews">
+    <div class="wrapper">
+    </div>
+  </section>
+
+  <section class="flamp">
+    <div class="wrapper">
+      <button>Оставьте отзыв о нас на flamp</button>
+    </div>
+  </section>
+
+  <section class="certs">
+    <div class="wrapper">
+      <h2>наши сертификаты и патенты</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="cert" style="background-position: 0px 0px;"></div>
+        </div>
+        <div class="column">
+          <div class="cert" style="background-position: -182px 0px;"></div>
+        </div>
+        <div class="column">
+          <div class="cert" style="background-position: -364px 0px;"></div>
+        </div>
+        <div class="column">
+          <div class="cert" style="background-position: -546px 0px;"></div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="cert" style="background-position: 0px -265px;"></div>
+        </div>
+        <div class="column">
+          <div class="cert" style="background-position: -182px -265px;"></div>
+        </div>
+        <div class="column">
+          <div class="cert" style="background-position: -364px -265px;"></div>
+        </div>
+        <div class="column">
+          <div class="cert" style="background-position: -546px -265px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="who">
+    <div class="wrapper">
+      <div class="center text-center">
+        <img src="images/face.jpg" alt="Генеральный директор компании 'Краснодеревщик'"/>
+        <p class="name">
+          <br>
+          <b>Леонид Чепелев</b>
+          <br>
+          <br>
+          Генеральный директор компании <br>«Краснодеревщик»
+        </p>
+      </div>
+      <div class="columns">
+        <div class="column">
+          Без преувеличения скажу, что двери «Краснодеревщик» - универсальный выбор для покупателя. Цена на них немного выше, чем на двери «эконом». Но по характеристикам они могут встать в ряд с элитными. Добавьте к этому превосходное качество заводской фурнитуры - и вы получите идеальную покупку. Лично в моем доме все двери — от фабрики «Краснодеревщик»!
+          <br><br>
+          Наша компания является официальным представителем фабрики «Краснодеревщик» в Уральском регионе. 
+        </div>
+        <div class="column">
+          Магазины компании работают в Екатеринбурге вот уже более 4 лет. Интернет-магазин регулярно оформляет покупки для всех, кто предпочитает онлайн-систему заказов. Каждый месяц мы отгружаем более 2000 дверей. Услуги по доставке и монтажу работают безупречно: 94% покупателей дверей заказывают их сразу с установкой.
+          <br><br><br>
+          Благодарим вас за доверие, рекомендации и хорошие отзывы. 
+        </div>
+      </div>
+      <div class="clear" style="clear: both;"></div>
+      <div class="center text-center">
+        <img src="images/logo.png" alt="Логотип компании Краснодеревщик" style="margin-bottom: 80px;"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="salons" id="salons">
+    <div class="wrapper">
+      <h2>наши салоны в Екатеринбурге</h2>
+      <div class="columns places">
+        <div class="column" style="margin-left: 75px;">
+          <div class="address">ул. Луначарского, 171</div>
+          <img src="images/salon1.jpg" class="salon-pic" alt='Фотография салона Краснодеревшик на улице Луначарского'/>
+          МЕНЕДЖЕРЫ САЛОНА:
+          <div class="columns managers">
+            <div class="column">
+              <img src="images/face-manager.png" alt='Фотография менеджера салона Краснодеревщик'/>
+              Ольга Усманова
+            </div>
+            <div class="column">
+              <img src="images/face-manager.png" alt='Фотография менеджера салона Краснодеревщик'/>
+              Ольга Усманова
+            </div>
+            <div class="column">
+              <img src="images/face-manager.png" alt='Фотография менеджера салона Краснодеревщик'/>
+              Ольга Усманова
+            </div>
+          </div>
+          <div class="clear" style="clear: both;"></div>
+          <button class="button-red">Заказать звонок из салона</button>
+        </div>
+
+        <div class="column" style="margin-left: 50px;">
+          <div class="address">ул. Белинского, 168</div>
+          <img src="images/salon2.jpg" class="salon-pic" alt='Фотография салона Краснодеревшик на улице Луначарского'/>
+          МЕНЕДЖЕРЫ САЛОНА:
+          <div class="columns managers">
+            <div class="column">
+              <img src="images/face-manager.png" alt='Фотография менеджера салона Краснодеревщик'/>
+              Ольга Усманова
+            </div>
+            <div class="column">
+              <img src="images/face-manager.png" alt='Фотография менеджера салона Краснодеревщик'/>
+              Ольга Усманова
+            </div>
+            <div class="column">
+              <img src="images/face-manager.png" alt='Фотография менеджера салона Краснодеревщик'/>
+              Ольга Усманова
+            </div>
+          </div>
+          <div class="clear" style="clear: both;"></div>
+          <button class="button-red">Заказать звонок из салона</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stairs"></div>
+
+  <section class="header">
+    <div class="wrapper">
+      <div class="logo-and-address">
+        <div class="logo">
+          <img src="images/logo.png" />
+          Продаем и устанавливаем двери с 2009 года
+        </div>
+        <div class="right">
+          <div class="phone">
+            +7 (343) 288-23-70
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src='scripts/script.js'></script>
+  <script src="scripts/angular-controllers.js"></script>
+</html>

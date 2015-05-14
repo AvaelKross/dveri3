@@ -5,11 +5,39 @@
   <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   <link rel=stylesheet href='css/avaelstrap.css'>
   <link rel=stylesheet href='css/style.css'>
+  <link rel=stylesheet href="css/jquery.bxslider.css">
   <script src="scripts/lib/jquery-1.10.2.min.js"></script>
   <script src="scripts/lib/angular.min.js"></script>
   <script src="scripts/lib/lodash.min.js"></script>
   <script src="scripts/lib/angular-route.min.js"></script>
   <script src="scripts/lib/jquery.maskedinput.min.js"></script>
+  <script src="scripts/lib/jquery.bxslider.min.js"></script>
+  <script>
+    $(function()
+    {
+        $(".bxslider1").bxSlider({
+          auto: true,
+          pause: 5000,
+          autoHover: true,
+          autoDelay: 1000,
+          responsive: false,
+          pager: false
+        });
+    });
+  </script>
+  <script>
+    $(function()
+    {
+        $(".bxslider2").bxSlider({
+          auto: true,
+          pause: 5000,
+          autoHover: true,
+          autoDelay: 1000,
+          responsive: false,
+          pager: false
+        });
+    });
+  </script>
  
   <section class="header">
     <div class="wrapper">
@@ -276,8 +304,110 @@
 
   <section class="reviews" id="reviews">
     <div class="wrapper" style="width: 100%; padding: 0px; overflow-x: hidden;">
-      <div style="float: left; width: 500px; margin-left: 0px; background-color: #f00; height: 100px;"></div>
-      <div style="float: right; margin-right: -200px; background-color: #0f0; height: 100px; width: 500px"></div>
+      <div class="wrapper2" style="width: 1100px; margin: 0px auto;">
+        <div class='slider left' style="margin-left: -90px;">
+          <ul class='bxslider1'>
+            <li style="background: url('images/rooms/1.jpg') no-repeat;">
+              <div class="content">
+                <div class="info">
+                  Межкомнатные двери Краснодеревщик,<br>
+                  серия 3000, модель 33.52, цвет черный дуб.<br>
+                  <br>
+                  Стоимость 4 комплектов дверей со скид-<br>
+                  кой <span class="yellow">42 843 руб.</span>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <img src="images/clients/1.png" alt="счастливые клиенты компании Краснодеревщик"/>
+                  </div>
+                  <div class="column">
+                    <div class="name">Александр и Юлия Бычковы</div>
+                    <div class="comment">«Отличный вариант по цене и качеству + подход к работе с клиентами! Не мало важный момент, оплата по банковской карте и частями, пока идет товар.<br><br>
+
+Сделали замеры и доставили в срок, только сама отделка квартиры затянулась, но дождался времени установки))) и мастера очень порадовали, особенно Александр!»</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li style="background: url('images/rooms/2.jpg') no-repeat;">
+              <div class="content">
+                <div class="info">
+                  Межкомнатные двери Краснодеревщик,<br>
+                  серия 3000, модель 33.52, цвет черный дуб.<br>
+                  <br>
+                  Стоимость 4 комплектов дверей со скид-<br>
+                  кой <span class="yellow">42 843 руб.</span>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <img src="images/clients/2.png" alt="счастливые клиенты компании Краснодеревщик"/>
+                  </div>
+                  <div class="column">
+                    <div class="name">Дмитрий, Светлана<br>и Василий Влащицкие</div>
+                    <div class="comment">««В Краснодеревщик обращались 2 раза, и оба раза остались довольны!<br>
+                      <br>
+Двери качественные, монтировали Александр и Сергей. Им особая благодарность, к установке подошли основательно, не спешили, каждую мелочь обговаривали с нами! Двери смотрятся богато! Очень понравились замки на последних дверях (закрываются мягко-не хлопают!). 
+<br><br>
+В общем двери классные! Обслуживание отличное! Монтаж качественный! Всем рекомендую!»</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class='slider right' style="margin-right: -90px;">
+          <ul class='bxslider1'>
+            <li style="background: url('images/rooms/2.jpg') no-repeat;">
+              <div class="content">
+                <div class="info">
+                  Межкомнатные двери Краснодеревщик,<br>
+                  серия 3000, модель 33.52, цвет черный дуб.<br>
+                  <br>
+                  Стоимость 4 комплектов дверей со скид-<br>
+                  кой <span class="yellow">42 843 руб.</span>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <img src="images/clients/2.png" alt="счастливые клиенты компании Краснодеревщик"/>
+                  </div>
+                  <div class="column">
+                    <div class="name">Дмитрий, Светлана<br>и Василий Влащицкие</div>
+                    <div class="comment">««В Краснодеревщик обращались 2 раза, и оба раза остались довольны!<br>
+                      <br>
+Двери качественные, монтировали Александр и Сергей. Им особая благодарность, к установке подошли основательно, не спешили, каждую мелочь обговаривали с нами! Двери смотрятся богато! Очень понравились замки на последних дверях (закрываются мягко-не хлопают!). 
+<br><br>
+В общем двери классные! Обслуживание отличное! Монтаж качественный! Всем рекомендую!»</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li style="background: url('images/rooms/1.jpg') no-repeat;">
+              <div class="content">
+                <div class="info">
+                  Межкомнатные двери Краснодеревщик,<br>
+                  серия 3000, модель 33.52, цвет черный дуб.<br>
+                  <br>
+                  Стоимость 4 комплектов дверей со скид-<br>
+                  кой <span class="yellow">42 843 руб.</span>
+                </div>
+                <div class="columns">
+                  <div class="column">
+                    <img src="images/clients/1.png" alt="счастливые клиенты компании Краснодеревщик"/>
+                  </div>
+                  <div class="column">
+                    <div class="name">Александр и Юлия Бычковы</div>
+                    <div class="comment">«Отличный вариант по цене и качеству + подход к работе с клиентами! Не мало важный момент, оплата по банковской карте и частями, пока идет товар.<br><br>
+
+Сделали замеры и доставили в срок, только сама отделка квартиры затянулась, но дождался времени установки))) и мастера очень порадовали, особенно Александр!»</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div style="float: left; width: 500px; margin-left: 80px; background-color: #f00; height: 100px;"></div>
+      <div style="float: right; margin-right: -200px; background-color: #0f0; height: 100px; width: 500px"></div> -->
     </div>
   </section>
 

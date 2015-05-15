@@ -62,7 +62,15 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       opening: "Универсальное",
       set: "Коробка, комплект наличников",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: 0px 0px"
+      cover_image_position: "background-position: 0px 0px",
+      colors: [
+        {image: "color.png", title: "Дуб шампань"},
+        {image: "color.png", title: "Белый ясень"},
+        {image: "color.png", title: "Грейвуд"},
+        {image: "color.png", title: "Грецкий орех"},
+        {image: "color.png", title: "Дуб канелла"},
+        {image: "color.png", title: "Дуб шервуд"}
+      ]
     },
     {
       title: "Bumerang",
@@ -74,7 +82,15 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       opening: "Универсальное",
       set: "Коробка, комплект наличников",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -172px 0px"
+      cover_image_position: "background-position: -172px 0px",
+      colors: [
+        {image: "color.png", title: "Дуб шампань"},
+        {image: "color.png", title: "Белый ясень"},
+        {image: "color.png", title: "Грейвуд"},
+        {image: "color.png", title: "Грецкий орех"},
+        {image: "color.png", title: "Дуб канелла"},
+        {image: "color.png", title: "Дуб шервуд"}
+      ]
     },
     {
       title: "Kaskad",
@@ -86,7 +102,15 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       opening: "Универсальное",
       set: "Коробка, комплект наличников",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -344px 0px"
+      cover_image_position: "background-position: -344px 0px",
+      colors: [
+        {image: "color.png", title: "Дуб шампань"},
+        {image: "color.png", title: "Белый ясень"},
+        {image: "color.png", title: "Грейвуд"},
+        {image: "color.png", title: "Грецкий орех"},
+        {image: "color.png", title: "Дуб канелла"},
+        {image: "color.png", title: "Дуб шервуд"}
+      ]
     },
     {
       title: "Tornado",
@@ -98,7 +122,15 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       opening: "Универсальное",
       set: "Коробка, комплект наличников",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: 0px 0px"
+      cover_image_position: "background-position: 0px 0px",
+      colors: [
+        {image: "color.png", title: "Дуб шампань"},
+        {image: "color.png", title: "Белый ясень"},
+        {image: "color.png", title: "Грейвуд"},
+        {image: "color.png", title: "Грецкий орех"},
+        {image: "color.png", title: "Дуб канелла"},
+        {image: "color.png", title: "Дуб шервуд"}
+      ]
     },
     {
       title: "Bumerang",
@@ -110,7 +142,15 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       opening: "Универсальное",
       set: "Коробка, комплект наличников",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -172px 0px"
+      cover_image_position: "background-position: -172px 0px",
+      colors: [
+        {image: "color.png", title: "Дуб шампань"},
+        {image: "color.png", title: "Белый ясень"},
+        {image: "color.png", title: "Грейвуд"},
+        {image: "color.png", title: "Грецкий орех"},
+        {image: "color.png", title: "Дуб канелла"},
+        {image: "color.png", title: "Дуб шервуд"}
+      ]
     },
     {
       title: "Kaskad",
@@ -122,7 +162,15 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       opening: "Универсальное",
       set: "Коробка, комплект наличников",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -344px 0px"
+      cover_image_position: "background-position: -344px 0px",
+      colors: [
+        {image: "color.png", title: "Дуб шампань"},
+        {image: "color.png", title: "Белый ясень"},
+        {image: "color.png", title: "Грейвуд"},
+        {image: "color.png", title: "Грецкий орех"},
+        {image: "color.png", title: "Дуб канелла"},
+        {image: "color.png", title: "Дуб шервуд"}
+      ]
     }
   ]
 

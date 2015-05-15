@@ -116,6 +116,15 @@
                 {{door.set}}<br>
                 {{door.sizes}}
               </div>
+              <div class="columns colors">
+                <div class="column color" ng-repeat="color in door.colors">
+                  <img ng-src="images/{{color.image}}" alt="{{color.title}}"/>
+                  {{color.title}}
+                </div>
+              </div>
+            </div>
+            <div class="button-block">
+              <button class="button-red">Консультация менеджера</button>
             </div>
           </div>
           <div class="shadow"></div>

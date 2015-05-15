@@ -96,7 +96,26 @@
           <div class="info" ng-class="{active: selectedDoorIndex==$index}">
             <div class="image" style="{{door.cover_image_position}}"></div>
             <div class="text-block">
-              Производитель: {{door.manufacturer}}
+              <div class="params">
+                Производитель:<br>
+                Конфигурация:<br>
+                Заполнение:<br>
+                Покрытие:<br>
+                Конструкция:<br>
+                Открывание:<br>
+                Комплектующие:<br>
+                Размеры:
+              </div>
+              <div class="properties">
+                {{door.manufacturer}}<br>
+                {{door.config}}<br>
+                {{door.filling}}<br>
+                {{door.cover}}<br>
+                {{door.construction}}<br>
+                {{door.opening}}<br>
+                {{door.set}}<br>
+                {{door.sizes}}
+              </div>
             </div>
           </div>
           <div class="shadow"></div>

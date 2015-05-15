@@ -194,7 +194,8 @@ button {
   width: 0px;
   height: 317px;
   overflow: hidden;
-  background-color: #f00;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
   position: absolute;
   left: 172px;
   -webkit-transition: width 0.3s;
@@ -207,15 +208,12 @@ button {
   transition: padding-left 0.3s;
   padding-top: 25px;
   padding-bottom: 25px;
+  font-size: 14px;
 }
 
 .catalog .door.right3 .info .text-block {
   left: auto;
   right: 172px;
-}
-
-.catalog .door.right3 .info.active .text-block {
-
 }
 
 .catalog .door .info.active .text-block {
@@ -225,6 +223,20 @@ button {
   -moz-transition: width 0.3s;
   -o-transition: width 0.3s;
   transition: width 0.3s;
+}
+
+.catalog .door .info .text-block .params {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 150px;
+}
+
+.catalog .door .info .text-block .properties {
+  position: absolute;
+  top: 25px;
+  left: 175px;
+  width: 320px;
 }
 
 .catalog .door .shadow {

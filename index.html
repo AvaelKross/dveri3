@@ -88,51 +88,16 @@
   </section>
 
   <section class="catalog" id="catalog">
-    <div class="wrapper">
+    <div class="wrapper" style="width: 100%; padding: 0px; overflow-x: hidden;">
       <h2>самые популярные модели<br>января-апреля 2015 года</h2>
 
       <div class="doors">
-        <div class="door">
-          <div class="info">
-            <div class="image"></div>
+        <div class="door" ng-repeat="door in doors" ng-class="{moveleft: selectedDoorIndex > 2 && $index < selectedDoorIndex, moveright:selectedDoorIndex < 3 && $index > selectedDoorIndex}" ng-click="setSelectedDoor($index)">
+          <div class="info" ng-class="{active: selectedDoorIndex==$index}">
+            <div class="image" style="{{door.cover_image_position}}"></div>
           </div>
           <div class="shadow"></div>
-          <div class="door-title">Tornado</div>
-        </div>
-        <div class="door">
-          <div class="info">
-            <div class="image" style="background-position: -172px 0px"></div>
-          </div>
-          <div class="shadow"></div>
-          <div class="door-title">Bumerang</div>
-        </div>
-        <div class="door">
-          <div class="info">
-            <div class="image" style="background-position: -344px 0px"></div>
-          </div>
-          <div class="shadow"></div>
-          <div class="door-title">Kaskad</div>
-        </div>
-        <div class="door">
-          <div class="info">
-            <div class="image"></div>
-          </div>
-          <div class="shadow"></div>
-          <div class="door-title">Tornado</div>
-        </div>
-        <div class="door">
-          <div class="info">
-            <div class="image" style="background-position: -172px 0px"></div>
-          </div>
-          <div class="shadow"></div>
-          <div class="door-title">Bumerang</div>
-        </div>
-        <div class="door">
-          <div class="info">
-            <div class="image" style="background-position: -344px 0px"></div>
-          </div>
-          <div class="shadow"></div>
-          <div class="door-title">Kaskad</div>
+          <div class="door-title">{{door.title}}</div>
         </div>
       </div>
     </div>

@@ -151,12 +151,31 @@ button {
   margin-bottom: 70px;
 }
 
+.catalog .doors {
+  width: 1097px;
+  margin: 0px auto;
+}
+
 .catalog .door {
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s;
   float: left;
   margin-left: 5px;
   margin-right: 8px;
   height: 520px;
   width: 172px;
+  left: 0px;
+  position: relative;
+}
+
+.catalog .door.moveleft {
+  left: -200px;
+}
+
+.catalog .door.moveright {
+  left: 200px;
 }
 
 .catalog .door .info {
@@ -208,10 +227,6 @@ button {
   background: url("../images/doors-main.png") no-repeat;
   position: relative;
   z-index: 1000;
-}
-
-.catalog .door:hover .info:after, .catalog .door.active .info:after {
-  /*bottom: -50px;*/
 }
 
 .catalog .info:hover, .catalog .info.active{

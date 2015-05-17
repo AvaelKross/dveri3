@@ -283,7 +283,8 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
   }
 
   $scope.closeAllPluses = function(){
-    $scope.plus = new Array(7);
+    // Do nothing! Hooray! Party time! Weekend!
+    //$scope.plus = new Array(7);
   }
 
   $scope.setSelectedDoor = function(index) {

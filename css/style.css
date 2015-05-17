@@ -97,7 +97,7 @@ button {
 
 .main {
   color: #fff;
-  background: url('../images/bg-main.jpg') no-repeat;
+  background: url('../images/bg-main2.jpg') no-repeat;
   background-position: center 0px;
   height: 674px;
 }
@@ -187,7 +187,7 @@ button {
   top: 50px;
   height: 400px;
   padding-bottom: 0px;
-  z-index: 1000;
+  z-index: 98;
 }
 
 .catalog .door .info .text-block {
@@ -352,7 +352,7 @@ button {
 .pros {
   height: 797px;
   color: #fff;
-  background: url('../images/bg-pros.jpg') no-repeat;
+  background: url('../images/bg-pros2.jpg') no-repeat;
   background-position: center 0px;
 }
 
@@ -462,12 +462,8 @@ button {
   margin-top: 25px;
 }
 
-.advices .plus:hover, .advices .minus {
+.advices .minus {
   background-position: -24px 0px;
-}
-
-.advices .plus:hover + .triangle-isosceles {
-  display: block;
 }
 
 .triangle-isosceles {
@@ -487,6 +483,7 @@ button {
 
 .triangle-isosceles.show {
   display: block;
+  z-index:20;
 }
 
 .triangle-isosceles:before {

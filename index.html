@@ -13,6 +13,7 @@
   <script src="scripts/lib/angular-route.min.js"></script>
   <script src="scripts/lib/jquery.maskedinput.min.js"></script>
   <script src="scripts/lib/jquery.bxslider.min.js"></script>
+  <script src="scripts/lib/angular-scroll.min.js"></script>
   <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   <script>
     $(function()
@@ -81,12 +82,12 @@
     <div class="wrapper">
       <nav>
         <ul>
-          <li><a href="#sale" class="active">Акция месяца</a></li>
-          <li><a href="#catalog">Каталог дверей</a></li>
-          <li><a href="#advices">Советы по подбору</a></li>
-          <li><a href="#struct">Структура дверей</a></li>
-          <li><a href="#reviews">Отзывы клиентов</a></li>
-          <li><a href="#salons">Контакты салонов</a></li>
+          <li><a href="#sale" du-scrollspy offset="110" du-smooth-scroll>Акция месяца</a></li>
+          <li><a href="#catalog" du-scrollspy offset="59" du-smooth-scroll>Каталог дверей</a></li>
+          <li><a href="#advices" du-scrollspy offset="59" du-smooth-scroll>Советы по подбору</a></li>
+          <li><a href="#struct" du-scrollspy offset="59" du-smooth-scroll>Структура дверей</a></li>
+          <li><a href="#reviews" du-scrollspy offset="59" du-smooth-scroll>Отзывы клиентов</a></li>
+          <li><a href="#salons" du-scrollspy offset="59" du-smooth-scroll>Контакты салонов</a></li>
         </ul>
       </nav>
     </div>

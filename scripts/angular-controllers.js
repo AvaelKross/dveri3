@@ -1,4 +1,4 @@
-var dveri = angular.module('dveri', ['ngRoute']);
+var dveri = angular.module('dveri', ['ngRoute', 'duScroll']).value('duScrollGreedy', true);
 
 dveri.config(function($routeProvider, $locationProvider) {
   $locationProvider.html5Mode({enabled: true, requireBase: false});

@@ -729,6 +729,13 @@ button {
   margin-top:-9px;
 }
 
+.stairs2 {
+  height: 9px;
+  background: url('../images/stairs3.png') repeat-x;
+  margin-bottom:-9px;
+  position: relative;
+}
+
 .popup .red {
   color: #f91a0c;
 }

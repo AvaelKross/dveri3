@@ -1,7 +1,7 @@
 var dveri = angular.module('dveri', ['ngRoute']);
 
 dveri.config(function($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode({enabled: true,requireBase: false});
+  $locationProvider.html5Mode({enabled: true, requireBase: false});
 });
 
 dveri.directive("scroll", function ($window) {
@@ -173,9 +173,6 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       ]
     }
   ]
-
-
-  $scope.map = { center: { latitude: 56.8212112, longitude: 60.6353681 }, zoom: 13, options: { scrollwheel: false } };
 
   $scope.checkEmail = function(email){
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

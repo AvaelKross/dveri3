@@ -6,12 +6,14 @@
   <link rel=stylesheet href='css/avaelstrap.css'>
   <link rel=stylesheet href='css/style.css'>
   <link rel=stylesheet href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
   <script src="scripts/lib/jquery-1.10.2.min.js"></script>
   <script src="scripts/lib/angular.min.js"></script>
   <script src="scripts/lib/lodash.min.js"></script>
   <script src="scripts/lib/angular-route.min.js"></script>
   <script src="scripts/lib/jquery.maskedinput.min.js"></script>
   <script src="scripts/lib/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   <script>
     $(function()
     {
@@ -37,6 +39,9 @@
           pager: false
         });
     });
+  </script>
+  <script>
+    $(".certs a").fancybox();
   </script>
  
   <section class="header">
@@ -418,30 +423,30 @@
       <h2>наши сертификаты и патенты</h2>
       <div class="columns">
         <div class="column">
-          <div class="cert" style="background-position: 0px 0px;"></div>
+          <a data-fancybox-href="images/certs/landing-opt-s1.jpg"><div class="cert" style="background-position: 0px 0px;"></div></a>
         </div>
         <div class="column">
-          <div class="cert" style="background-position: -182px 0px;"></div>
+          <a data-fancybox-href="images/certs/sertif-anti-fire.jpg"><div class="cert" style="background-position: -182px 0px;"></div></a>
         </div>
         <div class="column">
-          <div class="cert" style="background-position: -364px 0px;"></div>
+          <a data-fancybox-href="images/certs/sertifikat---2.jpg"><div class="cert" style="background-position: -364px 0px;"></div></a>
         </div>
         <div class="column">
-          <div class="cert" style="background-position: -546px 0px;"></div>
+          <a data-fancybox-href="images/certs/sertifikat---1.jpg"><div class="cert" style="background-position: -546px 0px;"></div></a>
         </div>
       </div>
       <div class="columns">
         <div class="column">
-          <div class="cert" style="background-position: 0px -265px;"></div>
+          <a data-fancybox-href="images/certs/landing-opt-s4.jpg"><div class="cert" style="background-position: 0px -265px;"></div></a>
         </div>
         <div class="column">
-          <div class="cert" style="background-position: -182px -265px;"></div>
+          <a data-fancybox-href="images/certs/landing-opt-s3.jpg"><div class="cert" style="background-position: -182px -265px;"></div></a>
         </div>
         <div class="column">
-          <div class="cert" style="background-position: -364px -265px;"></div>
+          <a data-fancybox-href="images/certs/sertif-san-epid.jpg"><div class="cert" style="background-position: -364px -265px;"></div></a>
         </div>
         <div class="column">
-          <div class="cert" style="background-position: -546px -265px;"></div>
+          <a data-fancybox-href="images/certs/landing-opt-s2.jpg"><div class="cert" style="background-position: -546px -265px;"></div></a>
         </div>
       </div>
     </div>

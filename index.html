@@ -52,7 +52,7 @@
           Продаем и устанавливаем двери с 2009 года
         </div>
         <div class="right">
-          <button>Адреса в Екатеринбурге</button>
+          <a href="#salons"><button>Адреса в Екатеринбурге</button></a>
           <div class="phone">
             +7 (343) 288-23-70
           </div>
@@ -65,12 +65,12 @@
     <div class="wrapper">
       <h1>продаём каждую 3-ю дверь<br>за 70 % от цены</h1>
       <h3>акция действует до конца мая</h3>
-      <form ng-submit="sendData(this,'главный экран-заказ каталога', 'main')">
+      <form>
         <h3>Оставьте заявку на участие в акции</h3>
         <input type="text" class="form-name" id="main-name" placeholder="Ваше имя" ng-model="names['main']"></input>
         <input type="text" input-mask class="form-phone" id="main-phone" placeholder="Ваш телефон" ng-model="phones['main']"></input>
         <input type="text" class="form-mail" id="main-mail" placeholder="Ваш e-mail" ng-model="emails['main']"></input>
-        <button type="button" id="main-name" class="button-red">ПОЛУЧИТЬ</button>
+        <button type="button" id="main-name" class="button-red" type="submit" ng-click="sendData(this,'акция - каждая 3я дверь за 70% от цены до конца мая', 'main', false)">ПОЛУЧИТЬ</button>
       </form>
     </div>
   </section>
@@ -129,7 +129,7 @@
               </div>
             </div>
             <div class="button-block">
-              <button class="button-red">Консультация менеджера</button>
+              <button class="button-red" ng-click="openLeadPopup('Консультация - дверь '+door.title,'Консультация менеджера','Получить')">Консультация менеджера</button>
             </div>
           </div>
           <div class="shadow"></div>
@@ -190,7 +190,7 @@
       </div>
       <div class="column">
         <h2>Самый полный каталог дверей<br>с актуальными ценами</h2>
-        <button class="button-red">ПОЛУЧИТЬ</button>
+        <button class="button-red" ng-click="openLeadPopup('Получить каталог','Получить каталог','Получить')">ПОЛУЧИТЬ</button>
       </div>
     </div>
   </section>
@@ -202,28 +202,28 @@
         <div class="columns" style="padding-left:33px;">
           <div class="column">
             <div class="advice-title">Как выбрать дверь?</div>
-            <div class="plus" ng-class="{minus:plus[0]}" ng-click="tooglePlus(0)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[0]}" ng-click="togglePlus(0)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[0]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">Что делать, если<br>дверь потеряла вид<br>или сломалась?</div>
-            <div class="plus" ng-class="{minus:plus[1]}" ng-click="tooglePlus(1)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[1]}" ng-click="togglePlus(1)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[1]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">Как скоро я получу<br>свои двери?</div>
-            <div class="plus" ng-class="{minus:plus[2]}" ng-click="tooglePlus(2)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[2]}" ng-click="togglePlus(2)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[2]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">какие модели дверей<br>есть у вас в наличии?</div>
-            <div class="plus" ng-class="{minus:plus[3]}" ng-click="tooglePlus(3)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[3]}" ng-click="togglePlus(3)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[3]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
@@ -233,21 +233,21 @@
         <div class="columns" style="padding-left:161px;">
           <div class="column">
             <div class="advice-title">Сколько стоит<br>установка двери?</div>
-            <div class="plus" ng-class="{minus:plus[4]}" ng-click="tooglePlus(4)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[4]}" ng-click="togglePlus(4)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[4]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">Можно ли купить<br>дверь в кредит?</div>
-            <div class="plus" ng-class="{minus:plus[5]}" ng-click="tooglePlus(5)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[5]}" ng-click="togglePlus(5)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[5]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">как мне принять<br>участие в акции?</div>
-            <div class="plus" ng-class="{minus:plus[6]}" ng-click="tooglePlus(6)" ng-mouseover="closeAllPluses()"></div>
+            <div class="plus" ng-class="{minus:plus[6]}" ng-click="togglePlus(6)"></div>
             <div class="triangle-isosceles" ng-class="{show:plus[6]}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
@@ -506,7 +506,7 @@
             </div>
           </div>
           <div class="clear" style="clear: both;"></div>
-          <button class="button-red">Заказать звонок из салона</button>
+          <button class="button-red" ng-click="openLeadPopup('Заказ звонка из салона на Луначарского 171','Заказать звонок','Позвоните мне!')">Заказать звонок из салона</button>
         </div>
 
         <div class="column" style="margin-left: 50px;">
@@ -528,7 +528,7 @@
             </div>
           </div>
           <div class="clear" style="clear: both;"></div>
-          <button class="button-red">Заказать звонок из салона</button>
+          <button class="button-red" ng-click="openLeadPopup('Заказ звонка из салона на Белинского 168','Заказать звонок','Позвоните мне!')">Заказать звонок из салона</button>
         </div>
       </div>
     </div>
@@ -549,6 +549,28 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="popup" ng-show="showThanks">
+    <div class="block lead-popup">
+      <span class="red">Благодарим за доверие!</span><br>
+Наш менеджер свяжется с вами в ближайшее время.
+    </div>
+    <div class="closer" ng-click="closeAllPopups()">
+    </div>
+  </section>
+
+  <section class="popup" ng-show="showLeadPopup">
+    <div class="block lead-popup">
+      <h3 class='red' ng-bind-html="showHtml(leadPopupText)"></h3>
+      <div style="margin-bottom: 30px;">Наш менеджер свяжется с вами в ближайшее время.</div>
+      <input type="text" class="form-input form-name" id="main-name" placeholder="Ваше имя" ng-model="names['popup']"></input>
+      <input type="text" input-mask class="form-input form-phone" id="main-phone" placeholder="Ваш телефон" ng-model="phones['popup']"></input>
+      <input type="text" class="form-input form-mail" id="main-mail" placeholder="Ваш e-mail" ng-model="emails['popup']"></input>
+      <button class="button-red" ng-click="sendData(this, currentWhere, 'popup', false)">{{leadPopupButtonText}}</button>
+    </div>
+    <div class="closer" ng-click="closeAllPopups()">
     </div>
   </section>
 

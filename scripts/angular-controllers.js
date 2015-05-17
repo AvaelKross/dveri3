@@ -44,11 +44,8 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
   $scope.phones = {};
   $scope.emails = {};
 
-  $scope.showDefaultDoorPopup = false;
-  $scope.showPaintDoorPopup = false;
   $scope.showLeadPopup = false;
   $scope.showPolitics = false;
-  $scope.showInOneClick = false;
   $scope.showThanks = false;
 
   $scope.doors = [
@@ -179,10 +176,6 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
     return re.test(email);
   }
 
-  $scope.changeType = function(type){
-    $scope.selectedType = type;
-  }
-
   $scope.showHtml = function(html){
     return $sce.trustAsHtml(html);
   }
@@ -196,17 +189,8 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
     $scope.showLeadPopup = true;
   }
 
-  $scope.changeColor = function(color){
-    if (color.pic_url!='') 
-      $scope.selectedDoor.selected_cover_img = color.pic_url;
-  }
-
   $scope.openPolitics = function(){
     $scope.showPolitics = true;
-  }
-
-  $scope.openInOneClick = function(){
-    $scope.showInOneClick = true;
   }
 
   $scope.closeAllPopups = function(){
@@ -218,19 +202,7 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
     $scope.showThanks = false;
   }
 
-  $scope.makeMontPrice = function(door){
-    if (door.price_set){
-    num = door.price_set.replace(/\s+/g, '');
-      num = parseInt(num) + 2300;
-    }else{
-      num = 0;
-    }
-    num = num.toString();
-    num = num.replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
-    return num;
-  }
-
-  $scope.sendData = function(object, comment, id){
+  $scope.sendData = function(object, comment, id, noemail){
     params = {}
     params['comment'] = comment;
     add_params = $location.search();
@@ -245,7 +217,7 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
       alert('Вы не ввели телефон!');
       return;
     }
-    if (params['email']!=undefined && params['email'].trim() != ""){
+    if (!noemail){
       if (!$scope.checkEmail(params['email'])) {
         alert('Email введен некорректно!');
         return;
@@ -258,11 +230,10 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
     params['utm_medium'] = add_params['utm_medium'];
     $http.post("ajax-proxy", params)
     .then(function( msg ) {
-      console.log(msg);
-      $scope.names = {};
-      $scope.phones = {};
-      $scope.emails = {};
     });
+    $scope.names = {};
+    $scope.phones = {};
+    $scope.emails = {};
     $scope.closeAllPopups();
     $scope.showThanks = true;
   }
@@ -271,9 +242,11 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
   // NEW CODE
   //
 
+  // What ? :D Why not just store num of toggled ?
+
   $scope.plus = new Array(7);
 
-  $scope.tooglePlus = function(number) {
+  $scope.togglePlus = function(number) {
     if ($scope.plus[number]) {
       $scope.plus[number] = false;
     }else{
@@ -288,7 +261,6 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
   }
 
   $scope.setSelectedDoor = function(index) {
-    console.log(index);
     if ($scope.selectedDoorIndex == index) {
       $scope.selectedDoorIndex = undefined;
     }else{

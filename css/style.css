@@ -728,3 +728,38 @@ button {
   background: url('../images/stairs2.png') repeat-x;
   margin-top:-9px;
 }
+
+.popup .red {
+  color: #f91a0c;
+}
+
+.lead-popup {
+  width: 440px;
+  padding: 40px;
+}
+
+.popup .block {
+  border-radius: 5px;
+}
+
+.popup {
+  font-size: 16px;
+}
+
+.popup h3 {
+  font-size: 18px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+
+.popup input {
+  border: 1px solid #c2c0c0;
+  width: 375px;
+  margin-top: 15px;
+}
+
+.popup button {
+  margin-top: 30px;
+  width: 270px;
+  text-transform: uppercase;
+}

@@ -98,15 +98,14 @@
   <section class="catalog" id="catalog">
     <div class="wrapper" style="width: 100%; padding: 0px; overflow-x: hidden;">
       <h2>самые популярные модели<br>января-апреля 2015 года</h2>
-
       <div class="doors">
         <div class="door" ng-repeat="door in doors" ng-class="{moveleft: selectedDoorIndex > 2 && $index < selectedDoorIndex, moveright:selectedDoorIndex < 3 && $index > selectedDoorIndex, right3: $index > 2}" ng-click="setSelectedDoor($index)">
           <div class="info" ng-class="{active: selectedDoorIndex==$index}">
-            <div class="image" style="{{door.cover_image_position}}"></div>
+            <img class="image" ng-src="images/doors/{{door.cover_image}}"></img>
             <div class="text-block">
               <div class="params">
                 Производитель:<br>
-                Конфигурация:<br>
+                <span ng-if="door.config != ''">Конфигурация:<br></span>
                 Заполнение:<br>
                 Покрытие:<br>
                 Конструкция:<br>
@@ -116,7 +115,7 @@
               </div>
               <div class="properties">
                 {{door.manufacturer}}<br>
-                {{door.config}}<br>
+                <span ng-if="door.config != ''">{{door.config}}<br></span>
                 {{door.filling}}<br>
                 {{door.cover}}<br>
                 {{door.construction}}<br>
@@ -126,8 +125,8 @@
               </div>
               <div class="columns colors">
                 <div class="column color" ng-repeat="color in door.colors">
-                  <img ng-src="images/{{color.image}}" alt="{{color.title}}"/>
-                  {{color.title}}
+                  <img ng-src="images/colors/{{colors[color.key].image}}" alt="{{colors[color.key].name}}" width="64" height="64" ng-click="$event.stopPropagation(); changeColor(color.image,doors.indexOf(door))"/>
+                  {{colors[color.key].name}}
                 </div>
               </div>
             </div>
@@ -205,29 +204,29 @@
         <div class="columns" style="padding-left:33px;">
           <div class="column">
             <div class="advice-title">Как выбрать дверь?</div>
-            <div class="plus" ng-class="{minus:plus[0]}" ng-click="togglePlus(0)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[0]}">
+            <div class="plus" ng-class="{minus: currentPlus == 0, sonar: currentPlus != 0}" ng-click="togglePlus(0)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 0}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">Что делать, если<br>дверь потеряла вид<br>или сломалась?</div>
-            <div class="plus" ng-class="{minus:plus[1]}" ng-click="togglePlus(1)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[1]}">
+            <div class="plus" ng-class="{minus: currentPlus == 1, sonar: currentPlus != 1}" ng-click="togglePlus(1)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 1}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">Как скоро я получу<br>свои двери?</div>
-            <div class="plus" ng-class="{minus:plus[2]}" ng-click="togglePlus(2)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[2]}">
+            <div class="plus" ng-class="{minus: currentPlus == 2, sonar: currentPlus != 2}" ng-click="togglePlus(2)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 2}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">какие модели дверей<br>есть у вас в наличии?</div>
-            <div class="plus" ng-class="{minus:plus[3]}" ng-click="togglePlus(3)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[3]}">
+            <div class="plus" ng-class="{minus: currentPlus == 3, sonar: currentPlus != 3}" ng-click="togglePlus(3)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 3}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
@@ -236,22 +235,22 @@
         <div class="columns" style="padding-left:161px;">
           <div class="column">
             <div class="advice-title">Сколько стоит<br>установка двери?</div>
-            <div class="plus" ng-class="{minus:plus[4]}" ng-click="togglePlus(4)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[4]}">
+            <div class="plus" ng-class="{minus: currentPlus == 4, sonar: currentPlus != 4}" ng-click="togglePlus(4)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 4}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">Можно ли купить<br>дверь в кредит?</div>
-            <div class="plus" ng-class="{minus:plus[5]}" ng-click="togglePlus(5)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[5]}">
+            <div class="plus" ng-class="{minus:currentPlus == 5, sonar: currentPlus != 5}" ng-click="togglePlus(5)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 5}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>
           <div class="column">
             <div class="advice-title">как мне принять<br>участие в акции?</div>
-            <div class="plus" ng-class="{minus:plus[6]}" ng-click="togglePlus(6)"></div>
-            <div class="triangle-isosceles" ng-class="{show:plus[6]}">
+            <div class="plus" ng-class="{minus: currentPlus == 6, sonar: currentPlus != 6}" ng-click="togglePlus(6)"></div>
+            <div class="triangle-isosceles" ng-class="{show: currentPlus == 6}">
             Современные лаконичные межкомнат-ные двери с установленной фурниту-рой, полностью готовые к установке. Изготовлены только с использованием европейских материалов. Низкие цены без ущерба качеству — дверное полотно изготовлено из исключительно гладких, твердых панелей, покрытых особо прочным материалом Sincrolam, имитирующим древесную текстуру с подчеркнутой порой. Модели дверей декорируются плоским багетом из MDF в цвет изделия, фиксирующим художественное стекло с цветным шелкотрафаретным рисунком.
             </div>
           </div>

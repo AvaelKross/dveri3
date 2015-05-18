@@ -50,126 +50,157 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
 
   $scope.doors = [
     {
-      title: "Tornado",
-      manufacturer: "Синержи",
-      config: "Остекленные",
+      title: "Локо 209",
+      manufacturer: "Свобода",
+      config: "",
       filling: "Массив",
-      cover: "ПВХ",
-      construction: "Сборная, царги из массива хвойных пород",
+      cover: "Шпон",
+      construction: "Каркасно-щитовая, с сотовым заполнением",
+      furn: "Установлена",
       opening: "Универсальное",
-      set: "Коробка, комплект наличников",
-      sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: 0px 0px",
+      set: "Коробка, комплект наличников, петли, замок",
+      sizes: "Ширина 600, 700, 800 мм; Высота 2000 мм",
+      cover_image: "1/Loko_209_venge_laysvud.jpg",
       colors: [
-        {image: "color.png", title: "Дуб шампань"},
-        {image: "color.png", title: "Белый ясень"},
-        {image: "color.png", title: "Грейвуд"},
-        {image: "color.png", title: "Грецкий орех"},
-        {image: "color.png", title: "Дуб канелла"},
-        {image: "color.png", title: "Дуб шервуд"}
+        {key: "white_yas", image: "1/Loko_209_beliy_yasen.jpg"},
+        {key: "venge_laiswood", image: "1/Loko_209_venge_laysvud.jpg"},
+        {key: "graywood", image: "1/Loko_209_greywood.jpg"},
+        {key: "makassar", image: "1/loko_209_makassar.jpg"}
       ]
     },
     {
-      title: "Bumerang",
-      manufacturer: "Синержи",
+      title: "Краснодеревщик 73.02",
+      manufacturer: "Краснодеревщик",
       config: "Остекленные",
-      filling: "Массив",
-      cover: "ПВХ",
-      construction: "Сборная, царги из массива хвойных пород",
+      filling: "Сотовое",
+      cover: "Шпон",
+      construction: "Каркасно-щитовая, с заполнением трубчатым ДСП",
+      furn: "Установлена",
       opening: "Универсальное",
-      set: "Коробка, комплект наличников",
-      sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -172px 0px",
+      set: "Коробка, комплект наличников, петли, замок",
+      sizes: "Ширина 620, 720, 820, 920 мм; Высота 2010 мм",
+      cover_image: "2/krasnoderevshik_73_02_moreniy_dub.jpg",
       colors: [
-        {image: "color.png", title: "Дуб шампань"},
-        {image: "color.png", title: "Белый ясень"},
-        {image: "color.png", title: "Грейвуд"},
-        {image: "color.png", title: "Грецкий орех"},
-        {image: "color.png", title: "Дуб канелла"},
-        {image: "color.png", title: "Дуб шервуд"}
+        {key: "dub_coffee", image: "2/krasnoderevshik_73_02_dub_kofe.jpg"},
+        {key: "brazil_grusha", image: "2/Krasnoderevshik_73.02_brazilskaya_grusha.jpg"},
+        {key: "dub_milk", image: "2/krasnoderevshik_73_02_dub_molochniy.jpg"},
+        {key: "mor_dub", image: "2/krasnoderevshik_73_02_moreniy_dub.jpg"}
       ]
     },
     {
-      title: "Kaskad",
-      manufacturer: "Синержи",
+      title: "Краснодеревщик 33.40ф",
+      manufacturer: "Краснодеревщик",
       config: "Остекленные",
       filling: "Массив",
-      cover: "ПВХ",
+      cover: "CPL",
       construction: "Сборная, царги из массива хвойных пород",
+      furn: "Установлена",
       opening: "Универсальное",
-      set: "Коробка, комплект наличников",
+      set: "Коробка, комплект наличников, петли, замок",
       sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -344px 0px",
+      cover_image: "3/krasnoderevshik_33_40f_beliy_chetnoe_steklo.jpg",
       colors: [
-        {image: "color.png", title: "Дуб шампань"},
-        {image: "color.png", title: "Белый ясень"},
-        {image: "color.png", title: "Грейвуд"},
-        {image: "color.png", title: "Грецкий орех"},
-        {image: "color.png", title: "Дуб канелла"},
-        {image: "color.png", title: "Дуб шервуд"}
+        {key: "white", image: "3/krasnoderevshik_33_40f_beliy_chetnoe_steklo.jpg"}
       ]
     },
     {
-      title: "Tornado",
-      manufacturer: "Синержи",
-      config: "Остекленные",
+      title: "Локо 207",
+      manufacturer: "Свобода",
+      config: "",
       filling: "Массив",
-      cover: "ПВХ",
-      construction: "Сборная, царги из массива хвойных пород",
+      cover: "Шпон",
+      construction: "Каркасно-щитовая, с сотовым заполнением",
+      furn: "Установлена",
       opening: "Универсальное",
-      set: "Коробка, комплект наличников",
-      sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: 0px 0px",
+      set: "Коробка, комплект наличников, петли, замок",
+      sizes: "Ширина 600, 700, 800 мм; Высота 2000 мм",
+      cover_image: "4/loko_207_venge_layswood.jpg",
       colors: [
-        {image: "color.png", title: "Дуб шампань"},
-        {image: "color.png", title: "Белый ясень"},
-        {image: "color.png", title: "Грейвуд"},
-        {image: "color.png", title: "Грецкий орех"},
-        {image: "color.png", title: "Дуб канелла"},
-        {image: "color.png", title: "Дуб шервуд"}
+        {key: "white_yas", image: "4/loko_207_beliy_yasen.jpg"},
+        {key: "venge_laiswood", image: "4/loko_207_venge_layswood.jpg"},
+        {key: "graywood", image: "4/loko_207_greywood.jpg"},
+        {key: "makassar", image: "4/loko_207_makassar.jpg"}
       ]
     },
     {
-      title: "Bumerang",
-      manufacturer: "Синержи",
-      config: "Остекленные",
+      title: "Локо 204",
+      manufacturer: "Свобода",
+      config: "",
       filling: "Массив",
-      cover: "ПВХ",
-      construction: "Сборная, царги из массива хвойных пород",
+      cover: "Шпон",
+      construction: "Каркасно-щитовая, с сотовым заполнением",
+      furn: "Установлена",
       opening: "Универсальное",
-      set: "Коробка, комплект наличников",
-      sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -172px 0px",
+      set: "Коробка, комплект наличников, петли, замок",
+      sizes: "Ширина 600, 700, 800 мм; Высота 2000 мм",
+      cover_image: "5/Loko_204_greywood.jpg",
       colors: [
-        {image: "color.png", title: "Дуб шампань"},
-        {image: "color.png", title: "Белый ясень"},
-        {image: "color.png", title: "Грейвуд"},
-        {image: "color.png", title: "Грецкий орех"},
-        {image: "color.png", title: "Дуб канелла"},
-        {image: "color.png", title: "Дуб шервуд"}
+        {key: "white_yas", image: "5/Loko_204_beliy_yasen.jpg"},
+        {key: "venge_laiswood", image: "5/Loko_204_venge_layswood.jpg"},
+        {key: "graywood", image: "5/Loko_204_greywood.jpg"},
+        {key: "makassar", image: "5/Loko_204_makassar.jpg"}
       ]
     },
     {
-      title: "Kaskad",
-      manufacturer: "Синержи",
+      title: "Краснодеревщик 50.33",
+      manufacturer: "Краснодеревщик",
       config: "Остекленные",
-      filling: "Массив",
-      cover: "ПВХ",
-      construction: "Сборная, царги из массива хвойных пород",
+      filling: "Сотовое",
+      cover: "CPL",
+      construction: "Каркасно-сотовая с фальцем (притвором) ",
+      furn: "Установлена",
       opening: "Универсальное",
-      set: "Коробка, комплект наличников",
-      sizes: "Ширина 600, 700, 800, 900 мм; Высота 2000 мм",
-      cover_image_position: "background-position: -344px 0px",
+      set: "Коробка, комплект наличников, петли, замок",
+      sizes: "Ширина 620, 720, 820, 920 мм; Высота 2010 мм",
+      cover_image: "6/krasnoderevshik 50.33_beliy_steklo_matovoe.jpg",
       colors: [
-        {image: "color.png", title: "Дуб шампань"},
-        {image: "color.png", title: "Белый ясень"},
-        {image: "color.png", title: "Грейвуд"},
-        {image: "color.png", title: "Грецкий орех"},
-        {image: "color.png", title: "Дуб канелла"},
-        {image: "color.png", title: "Дуб шервуд"}
+        {key: "white", image: "6/krasnoderevshik 50.33_beliy_steklo_matovoe.jpg"}
       ]
     }
   ]
+
+  $scope.colors = {
+    white_yas: {
+      name: "Белый ясень",
+      image: "white_yasen.jpg"
+    },
+    white: {
+      name: "Белый",
+      image: "white.jpg"
+    },
+    brazil_grusha: {
+      name: "Бразильская груша",
+      image: "brazil_grusha.jpg"
+    },
+    venge_laiswood: {
+      name: "Венге Лайсвуд",
+      image: "venge_laiswood.jpg"
+    },
+    venge: {
+      name: "Венге",
+      image: "venge.jpg"
+    },
+    graywood: {
+      name: "Грейвуд",
+      image: "graywood.jpg"
+    },
+    dub_coffee: {
+      name: "Дуб кофе",
+      image: "dub_coffee.jpg"
+    },
+    dub_milk: {
+      name: "Дуб молочный",
+      image: "dub_milk.jpg"
+    },
+    makassar: {
+      name: "Макассар",
+      image: "makassar.jpg"
+    },
+    mor_dub: {
+      name: "Дуб морёный",
+      image: "mor_dub.jpg"
+    }
+  }
 
   $scope.checkEmail = function(email){
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -242,22 +273,14 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
   // NEW CODE
   //
 
-  // What ? :D Why not just store num of toggled ?
-
-  $scope.plus = new Array(7);
+  $scope.currentPlus = undefined;
 
   $scope.togglePlus = function(number) {
-    if ($scope.plus[number]) {
-      $scope.plus[number] = false;
+    if ($scope.currentPlus != undefined) {
+      $scope.currentPlus = undefined;
     }else{
-      $scope.plus = new Array(7);
-      $scope.plus[number] = true;
+      $scope.currentPlus = number;
     }
-  }
-
-  $scope.closeAllPluses = function(){
-    // Do nothing! Hooray! Party time! Weekend!
-    //$scope.plus = new Array(7);
   }
 
   $scope.setSelectedDoor = function(index) {
@@ -266,6 +289,10 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
     }else{
       $scope.selectedDoorIndex = index;
     }
+  }
+
+  $scope.changeColor = function(image_url, index) {
+    $scope.doors[index].cover_image = image_url;
   }
 
 });

@@ -187,7 +187,7 @@ button {
   top: 50px;
   height: 400px;
   padding-bottom: 0px;
-  z-index: 98;
+  z-index: 95;
 }
 
 .catalog .door .info .text-block {
@@ -289,6 +289,7 @@ button {
 
 .catalog .door .info .text-block .color img {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .catalog .door .shadow {
@@ -307,9 +308,9 @@ button {
   height: 16px;
   width: 241px;
   position: relative;
-  bottom: -10px;
+  bottom: -12px;
   left: -34px;
-  z-index: 0;
+  z-index: 96;
   opacity: 0.6;
 }
 
@@ -325,7 +326,7 @@ button {
   width: 172px;
   height: 367px;
   cursor: pointer;
-  background: url("../images/doors-main.png") no-repeat;
+  background-size: cover;
   position: relative;
   z-index: 1000;
   float:left;
@@ -460,6 +461,7 @@ button {
   cursor: pointer;
   margin: 0px auto;
   margin-top: 25px;
+  border-radius:17px;
 }
 
 .advices .minus {

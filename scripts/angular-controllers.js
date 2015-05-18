@@ -20,7 +20,7 @@ dveri.directive("scroll", function ($window) {
 dveri.directive("fadein", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
-      if (this.pageYOffset >= 1550) {
+      if (this.pageYOffset >= 1250) {
         setTimeout(function () {
           $(element).fadeIn(700);
         }, parseInt(attrs["fadein"]));

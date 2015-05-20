@@ -732,7 +732,7 @@ button {
 .stairs {
   height: 9px;
   background: url('../images/stairs2.png') repeat-x;
-  margin-top:-9px;
+  margin-top:-8px;
 }
 
 .stairs2 {

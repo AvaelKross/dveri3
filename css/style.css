@@ -617,6 +617,10 @@ button {
   font-size: 16px;
 }
 
+.flamp a {
+  text-decoration: none;
+}
+
 .flamp button:hover, .flamp button:active {
   color: #f00;
 }

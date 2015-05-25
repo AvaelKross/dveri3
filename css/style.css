@@ -88,11 +88,15 @@ button {
 }
 
 .phone {
-  color: red;
   font-size: 16px;
   font-weight: 700;
   padding-top: 18px;
   margin-left: 40px;
+}
+
+.phone a {
+  color: red;
+  text-decoration: none;
 }
 
 .main {

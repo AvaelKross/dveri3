@@ -420,7 +420,7 @@ button {
 .advices {
   background: url("../images/bg-advices.png") no-repeat;
   background-position: center 100px;
-  height: 790px;
+  height: 650px;
 }
 
 .advices-columns {
@@ -727,6 +727,8 @@ button {
 
 .salons .managers .column img {
   margin-bottom: 15px;
+  width: 105px;
+  height: 105px;
 }
 
 .stairs {

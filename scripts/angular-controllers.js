@@ -276,7 +276,7 @@ dveri.controller('MainCtrl', function ($scope, $sce, $location, $http) {
   $scope.currentPlus = undefined;
 
   $scope.togglePlus = function(number) {
-    if ($scope.currentPlus != undefined) {
+    if ($scope.currentPlus == number) {
       $scope.currentPlus = undefined;
     }else{
       $scope.currentPlus = number;

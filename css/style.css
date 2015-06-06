@@ -101,9 +101,19 @@ button {
 
 .main {
   color: #fff;
-  background: url('../images/bg-main2.jpg') no-repeat;
+  background: url('../images/bg-main3.jpg') no-repeat;
   background-position: center 0px;
-  height: 674px;
+  height: 621px;
+}
+
+.main .button-green {
+  color: white;
+  position: absolute;
+  top: 450px;
+  left: 142px;
+  height: 65px;
+  font-size: 20px;
+  box-shadow: 2px 5px 10px rgba(0,0,0,0.3); 
 }
 
 .main form{

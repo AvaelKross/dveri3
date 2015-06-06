@@ -7,7 +7,7 @@ dveri.config(function($routeProvider, $locationProvider) {
 dveri.directive("scroll", function ($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
-      if (this.pageYOffset >= 777) {
+      if (this.pageYOffset >= 724) {
         scope.fixedMenu = true;
       } else {
         scope.fixedMenu = false;
@@ -20,9 +20,9 @@ dveri.directive("scroll", function ($window) {
 dveri.directive("fadein", function($window) {
   return function(scope, element, attrs) {
     angular.element($window).bind("scroll", function() {
-      if (this.pageYOffset >= 1250) {
+      if (this.pageYOffset >= 1200) {
         setTimeout(function () {
-          $(element).fadeIn(700);
+          $(element).fadeIn(500);
         }, parseInt(attrs["fadein"]));
       }
       scope.$apply();

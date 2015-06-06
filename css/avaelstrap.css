@@ -103,15 +103,15 @@ button {
 }
 
 .button-green {
-  background-color: #a2d13e;
+  background-color: #0b9e34;
 }
 
 .button-green:hover {
-  background-color: #92c12e;
+  background-color: #10b23d;
 }
 
 .button-green:active {
-  background-color: #a2d13e;
+  background-color: #0b9e34;
 }
 
 .button-red {

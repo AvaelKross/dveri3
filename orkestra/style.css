@@ -1,0 +1,193 @@
+* {
+    font-size: 18px;
+    font-family: 'Arial';
+    box-sizing: border-box;
+}
+
+body,html {
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,h4 {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.inner-header h3 {
+    color: #7b7b7b;
+    font-size: 17px;
+    font-weight: normal;
+    padding-left: 43px;
+}
+
+
+.header {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+
+.bottom {
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    width: 575px;
+}
+
+
+.inner-header {
+    padding-bottom: 25px;
+}
+
+.phone {
+    background: rgba(0, 0, 0, 0) url("phone.jpg") no-repeat scroll 0 0 / 100% auto;
+    color: #7b7b7b;
+    float: right;
+    font-family: sans-serif;
+    font-size: 29px;
+    font-weight: bold;
+    height: 60px;
+    margin-right: 49px;
+    padding-top: 15px;
+    text-align: center;
+    width: 335px;
+}
+
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1 {
+    color: #d42d13;
+    font-family: Verdana;
+    font-size: 32px;
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.menu {
+    background: #d42d13 none repeat scroll 0 0;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+
+.menu .container {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+
+.menu li a {
+    border-right: 1px solid #fff;
+    color: #fff;
+    float: left;
+    font-family: Verdana;
+    font-size: 23px;
+    font-weight: normal;
+    padding-left: 27px;
+    text-decoration: none;
+    padding-right: 27px;
+}
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.section1 .container {
+    width: 865px;
+}
+
+
+.section1 p {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.main-body > img {
+    display: block;
+    margin: 60px auto;
+}
+
+.footer {
+    background: #e1e1e1 none repeat scroll 0 0;
+    padding-top: 30px;
+}
+
+
+.inner-menu {
+    overflow: hidden;
+}
+
+
+.inner-menu li a {
+    float: left;
+    font-family: Verdana;
+    font-size: 23px;
+    padding-left: 45px;
+    text-decoration: underline;
+    color: #000;
+    text-transform: uppercase;
+}
+.inner-menu li a:hover {
+    text-decoration: none;
+}
+
+.text-block {
+    margin-top: 40px;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+
+.text-block > p {
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.col-left, .col-right {
+    float: left;
+    width: 50%;
+    padding-left: 45px;
+}
+
+.text-block strong {
+    font-family: Verdana;
+    font-size: 23px;
+}
+
+.contact li {
+    line-height: 25px;
+}
+
+.col-right {
+    padding-left: 90px;
+}
+
+.col-left p, .col-right p {
+    font-size: 22px;
+}
+
+
+.contact {
+    overflow: hidden;
+    padding-bottom: 40px;
+}
